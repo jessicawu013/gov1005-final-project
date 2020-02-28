@@ -1,0 +1,15 @@
+---
+title: "About"
+author: "Jessica Wu"
+date: "2/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is my about page for my final project!
+
+Since there is new data being published everyday, I will be uploading my graphs
+and data accordingly.
