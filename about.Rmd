@@ -9,7 +9,22 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This is my about page for my final project!
+### About
+This is my about page for my final project! Here is the link to my GitHub repo:
+https://github.com/jessicawu013/gov1005-final-project
+
+This project explores a narration of the progression of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) since its initial outbreak in December 2019. 
+
+In contrast to other mappings of the virus outbreak,  these visualizations aim to provide insight into the consequences of the infection on local and global communities. Such consequences include the prevalence of misinformation about the disease online and through other media outlets, the rise in racism towards Asians, namely Asian-Americans, and the slowdown of the economy. 
+
+Finally, the project will map not only current cases, but also deaths and recoveries.
+
+
+### Gathering Data
+
+The primary data I will be using will be the compilation of data and reports managed by researchers at John Hopkins University. 
+
+##### Additional Notes
 
 Since there is new data being published everyday, I will be uploading my graphs
 and data accordingly.
