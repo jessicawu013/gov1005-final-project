@@ -9,22 +9,40 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### About
 This is my about page for my final project! Here is the link to my GitHub repo:
 https://github.com/jessicawu013/gov1005-final-project
 
+## Project Overview
+
 This project explores a narration of the progression of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) since its initial outbreak in December 2019. 
 
-In contrast to other mappings of the virus outbreak,  these visualizations aim to provide insight into the consequences of the infection on local and global communities. Such consequences include the prevalence of misinformation about the disease online and through other media outlets, the rise in racism towards Asians, namely Asian-Americans, and the slowdown of the economy. 
+The project will aim to link these progressions to certain instances.
+For example, we will visualize:
+1. How the one small sales conference led to the outbreak of hundreds of cases 
+across the world
+2. How Italy suddenly has hundreds of cases
+3. The diamond cruise ship
+
+In contrast to other mappings of the virus outbreak,  these visualizations aim 
+to provide insight into the consequences of the infection on local and global 
+communities. Such consequences include the prevalence of misinformation about 
+the disease online and through other media outlets, the rise in racism towards 
+Asians, namely Asian-Americans, and the slowdown of the economy. 
 
 Finally, the project will map not only current cases, but also deaths and recoveries.
 
-
-### Gathering Data
+## Gathering Data
 
 The primary data I will be using will be the compilation of data and reports managed by researchers at John Hopkins University. 
+
+This data will be juxtaposed against several other datasets, as follows:
+ 1. S&P 500 Index from Yahoo Finance
+ 2. Data of Asian-American racial incidences, compiled from various news sources
+ 3. Data scraped from social media sites, analyzing how many times posts mentioning
+ the word "coronavirus" mentioned other words. 
 
 ##### Additional Notes
 
 Since there is new data being published everyday, I will be uploading my graphs
-and data accordingly.
+and data accordingly. I am currently having a problem loading in the csv files 
+from JHU, but as soon as that gets resolved I will be able to fully load the data.

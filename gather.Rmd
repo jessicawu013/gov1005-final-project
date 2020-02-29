@@ -37,3 +37,11 @@ SP500 <- read_csv("^GSPC.csv")
 ## https://finance.yahoo.com/quote/%5EGSPC/history/
 ```
 
+Here is the data of racial incidences targeting Asian Americans.
+```{r}
+
+# This data is currently nonexistent because I will have to hand-compile it
+# by sifting through news articles and tracking location, date, incident type.
+
+```
+
