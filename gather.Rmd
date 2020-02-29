@@ -9,13 +9,31 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(readr)
+library(janitor)
 ```
 
 ## Uploading all of my datasets here.
 
-```{r}
+Here are the datasets from JHU, which has a daily report of all the confirmed cases,
+including current cases, deaths, and recoveries,
+
+```{r jhu_data}
+Here are the datasets from 
 01-22-2020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv")
 
 02-28-2020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/02-28-2020.csv")
+```
+
+Here is the stock market data.
+
+```{r stock_market}
+
+# This is the historical data for the S&P 500 from Yahoo Finance, which contains
+# the daily data since the start of March 2019, but we will only be looking at
+# data since November 2019.
+
+SP500 <- read_csv("^GSPC.csv")
+
+## https://finance.yahoo.com/quote/%5EGSPC/history/
 ```
 
