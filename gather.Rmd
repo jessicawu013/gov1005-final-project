@@ -7,6 +7,15 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readr)
 ```
 
 ## Uploading all of my datasets here.
+
+```{r}
+01-22-2020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv")
+
+02-28-2020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/02-28-2020.csv")
+```
+
