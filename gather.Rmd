@@ -45,3 +45,12 @@ Here is the data of racial incidences targeting Asian Americans.
 
 ```
 
+Here is the data scraped from Facebook and Twitter.
+
+```{r}
+
+# Clearly I have not figured out how to scrape social media, but I will get there.
+
+```
+
+

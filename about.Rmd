@@ -38,8 +38,8 @@ The primary data I will be using will be the compilation of data and reports man
 This data will be juxtaposed against several other datasets, as follows:
  1. S&P 500 Index from Yahoo Finance
  2. Data of Asian-American racial incidences, compiled from various news sources
- 3. Data scraped from social media sites, analyzing how many times posts mentioning
- the word "coronavirus" mentioned other words. 
+ 3. Data scraped from social media sites (Twitter and Facebook), analyzing how 
+ many times posts mentioning the word "coronavirus" mentioned certain other words. 
 
 ##### Additional Notes
 
