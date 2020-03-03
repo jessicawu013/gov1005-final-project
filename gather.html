@@ -371,6 +371,49 @@ summary {
 
 <div id="uploading-all-of-my-datasets-here." class="section level2">
 <h2>Uploading all of my datasets here.</h2>
+<p>Here are the datasets from JHU, which has a daily report of all the confirmed cases, including current cases, deaths, and recoveries,</p>
+<pre class="r"><code>a01222020 &lt;- read_csv(&quot;COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   `Province/State` = col_character(),
+##   `Country/Region` = col_character(),
+##   `Last Update` = col_character(),
+##   Confirmed = col_double(),
+##   Deaths = col_double(),
+##   Recovered = col_double()
+## )</code></pre>
+<pre class="r"><code>a02282020 &lt;- read_csv(&quot;COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/02-28-2020.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   `Province/State` = col_character(),
+##   `Country/Region` = col_character(),
+##   `Last Update` = col_datetime(format = &quot;&quot;),
+##   Confirmed = col_double(),
+##   Deaths = col_double(),
+##   Recovered = col_double()
+## )</code></pre>
+<p>Here is the stock market data.</p>
+<pre class="r"><code># This is the historical data for the S&amp;P 500 from Yahoo Finance, which contains
+# the daily data since the start of March 2019, but we will only be looking at
+# data since November 2019.
+
+SP500 &lt;- read_csv(&quot;^GSPC.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   Date = col_date(format = &quot;&quot;),
+##   Open = col_double(),
+##   High = col_double(),
+##   Low = col_double(),
+##   Close = col_double(),
+##   `Adj Close` = col_double(),
+##   Volume = col_double()
+## )</code></pre>
+<pre class="r"><code>## https://finance.yahoo.com/quote/%5EGSPC/history/</code></pre>
+<p>Here is the data of racial incidences targeting Asian Americans.</p>
+<pre class="r"><code># This data is currently nonexistent because I will have to hand-compile it
+# by sifting through news articles and tracking location, date, incident type.</code></pre>
+<p>Here is the data scraped from Facebook and Twitter.</p>
+<pre class="r"><code># Clearly I have not figured out how to scrape social media, but I will get there.</code></pre>
 </div>
 
 
