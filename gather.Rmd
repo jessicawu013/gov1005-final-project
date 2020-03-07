@@ -1,7 +1,7 @@
 ---
 title: "Gathering Data"
 author: "Jessica Wu"
-date: "2/28/2020"
+date: "03/07/2020"
 output: html_document
 ---
 
@@ -10,18 +10,67 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(readr)
 library(janitor)
+library(gt)
 ```
+There is a slight concern with my project, which is that at some point so many
+people may have the disease that there will no longer be accurate records of the
+data.
+
+The data is changing incredibly rapidly, more so than I anticipated even last week.
+For these reasons, I've decided to limit the scope of my project to just the U.S.,
+as there will soon be more than enough cases to have a significant dataset just within
+the U.S. This week, I figured out how I might be able to efficiently continuously
+update my project with the changing data. Also, rather than uploading each day's
+new data, it makes far more sense to use the timeseries data on the JHU github.
 
 ## Uploading all of my datasets here.
 
 Here are the datasets from JHU, which has a daily report of all the confirmed cases,
-including current cases, deaths, and recoveries,
+including current cases, deaths, and recoveries.
 
-```{r jhu_data}
+These datasets are timeseries, which log the number of confirmed/recovered/deaths,
+with each successive date as its own column. 
+```{r jhu_time_series_confirmed, echo=FALSE}
+
+# These are the confirmed U.S. cases up to 03/07/2020.
+
+confirmed03072020 <- read_csv("COVID-19-03-07/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv") %>%
+  filter(`Country/Region` == 'US')
+
+gt(confirmed03072020)
+```
+
+```{r jhu_time_series_deaths, echo=FALSE}
+
+# These are the death cases up to 03/07/2020.
+
+deaths03072020 <- read_csv("COVID-19-03-07/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv") %>%
+  filter(`Country/Region` == 'US')
+
+gt(deaths03072020)
+```
+
+```{r jhu_time_series_recovered}
+
+# These are the death cases up to 03/07/2020.
+
+recovered03072020 <- read_csv("COVID-19-03-07/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv") %>%
+  filter(`Country/Region` == 'US')
+
+gt(recovered03072020)
+
+```
+
+
+
+These datasets are daily reports.
+
+```{r jhu_daily_reports}
 a01222020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv")
 
 a02282020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/02-28-2020.csv")
 ```
+
 
 Here is the stock market data.
 
