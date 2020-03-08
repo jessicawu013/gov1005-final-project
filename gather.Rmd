@@ -1,5 +1,5 @@
 ---
-title: "Gathering Data"
+title: "Gathering Data, Milestone 4 Version"
 author: "Jessica Wu"
 date: "03/07/2020"
 output: html_document
@@ -25,7 +25,7 @@ new data, it makes far more sense to use the timeseries data on the JHU github.
 
 ## Uploading all of my datasets here.
 
-Here are the datasets from JHU, which has a daily report of all the confirmed cases,
+Here are the datasets from JHU, which tracks of all the confirmed cases,
 including current cases, deaths, and recoveries.
 
 These datasets are timeseries, which log the number of confirmed/recovered/deaths,
@@ -37,33 +37,37 @@ with each successive date as its own column.
 confirmed03072020 <- read_csv("COVID-19-03-07/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv") %>%
   filter(`Country/Region` == 'US')
 
-gt(confirmed03072020)
+gt(confirmed03072020) %>%
+  tab_header(
+    title = "Time Series of Confirmed Cases")
 ```
 
 ```{r jhu_time_series_deaths, echo=FALSE}
 
-# These are the death cases up to 03/07/2020.
+# These are the DEATH cases up to 03/07/2020.
 
 deaths03072020 <- read_csv("COVID-19-03-07/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv") %>%
-  filter(`Country/Region` == 'US')
+  filter(`Country/Region` == 'US') 
 
-gt(deaths03072020)
+gt(deaths03072020) %>%
+  tab_header(title = "Time Series of Deaths")
 ```
 
-```{r jhu_time_series_recovered}
+```{r jhu_time_series_recovered, echo=FALSE}
 
-# These are the death cases up to 03/07/2020.
+# These are the RECOVERED cases up to 03/07/2020.
 
 recovered03072020 <- read_csv("COVID-19-03-07/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv") %>%
   filter(`Country/Region` == 'US')
 
-gt(recovered03072020)
+gt(recovered03072020) %>%
+  tab_header(title = "Time Series of Recoveries")
 
 ```
 
 
 
-These datasets are daily reports.
+These datasets are daily reports, which I no longer think I will be using.
 
 ```{r jhu_daily_reports}
 a01222020 <- read_csv("COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv")
@@ -98,6 +102,8 @@ Here is the data scraped from Facebook and Twitter.
 ```{r}
 
 # Clearly I have not figured out how to scrape social media, but I will get there.
+# Now that the scope has been limited to the U.S., I will be tracking combinations
+# of words, such as "conspiracy" and "coronavirus", or "coronavirus" and "chink."
 
 ```
 
