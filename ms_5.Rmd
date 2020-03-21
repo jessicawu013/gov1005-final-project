@@ -1,0 +1,56 @@
+---
+title: "Milestone 5"
+author: "Jessica Wu"
+date: "3/20/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(readr)
+library(janitor)
+library(gt)
+library(lubridate)
+```
+
+```{r gather, include=FALSE}
+# These are the confirmed U.S. cases up to 03/20/2020.
+
+confirmed <- read_csv("COVID-19/2020-03-20/time_series_19-covid-Confirmed.csv") %>%
+  filter(`Country/Region` == 'US') %>%
+  select(-`Country/Region`, 
+         -Lat,
+         -Long,
+         -starts_with("1"),
+         -starts_with("2"),
+         -`3/1/20`, -`3/2/20`, -`3/3/20`, -`3/4/20`, -`3/5/20`, -`3/5/20`,
+         -`3/6/20`, -`3/7/20`, -`3/8/20`, -`3/9/20`) %>%
+  rename(state = `Province/State`) %>%
+  filter(!state == 'Diamond Princess') %>%
+  filter(!state == "Grand Princess") %>%
+  head(55) %>%
+  pivot_longer(-state, names_to = "date", values_to = "count")
+
+# changing date from type character to type date
+confirmed$date <- as.Date(confirmed$date, "%m/%d/%y")
+```
+
+```{r graphic}
+
+ms5 <- confirmed %>%
+  group_by(state) %>%
+  ggplot(aes(x = date, y = count, color = state)) +
+  geom_line(alpha = 0.5) +
+  labs(
+    title = "Number of Confirmed Coronavirus Cases in the U.S. by State",
+    subtitle = "*Numbers are likely to be underestimated due to lack of testing.",
+    y = "Number of Cases",
+    x = "Date"
+  ) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+ms5
+```
+
